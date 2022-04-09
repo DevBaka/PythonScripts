@@ -36,9 +36,9 @@ while count != 20000:
   browser.find_element_by_xpath("//div[contains(@class,'stream-prev')]").click()
   img = browser.find_element_by_class_name("item-image-actual")
   src = img.get_attribute('src')
-  print src
+  print(src)
   urllib.urlretrieve(src, src.rsplit('/', 1)[-1])
   count = count + 1
  except:
-  print "error with " + str(count)
+  print("error with " + str(count))
   count = count + 1
